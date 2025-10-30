@@ -12,7 +12,7 @@ const teamMembers = [
     twitter: 'https://twitter.com/jihocho',
   },
   {
-    name: 'Jaemin Jeong',
+    name: 'J. Jeong',
     role: 'AI Specialist',
     bio: 'Jaemin is a leading AI researcher with expertise in machine learning and neural networks, developing our cutting-edge AI solutions and technological innovations.',
     email: 'common.jaemin@gmail.com',
