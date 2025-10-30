@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 const teamMembers = [
   {
-    name: 'Jiho Cho',
+    name: 'J. Cho',
     role: 'Co-founder & CEO',
     bio: "With over 10 years of experience in technology leadership, Jiho combines visionary thinking with deep technical expertise to drive unleashifAI's mission and strategic direction.",
     email: 'info@unleashifai.com',
