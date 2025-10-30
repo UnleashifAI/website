@@ -1,0 +1,9 @@
+
+<svg width="300" height="60" viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main title -->
+  <path d="M22 10c0 5.523-4.477 10-10 10S2 15.523 2 10 6.477 0 12 0s10 4.477 10 10zm-17.5 0a7.5 7.5 0 1 0 15 0 7.5 7.5 0 0 0-15 0z" fill="#000"/>
+  <path d="M5 40h14v4H5zm0-8h14v4H5zm0-8h14v4H5z" fill="#000"/>
+  <text x="30" y="35" font-family="Georgia, serif" font-weight="700" font-size="36" fill="#000000">unleashifAI</text>
+  <!-- Tagline -->
+  <text x="80" y="50" font-family="Arial, sans-serif" font-weight="400" font-size="12" letter-spacing="2" fill="#000000">UNLEASH YOUR POTENTIAL</text>
+</svg>
