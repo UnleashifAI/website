@@ -4,12 +4,12 @@ import React, { useState } from 'react';
 
 const teamMembers = [
   {
-    //name: ' Cho',
+    name: ' ',
     role: 'Founder & Chief AI Strategist',
     bio: "With over 15 years of leadership experience in $\text{AI}$ $\text{R\&D}$ commercialization and global technology strategy, our Founder guides the company's vision. He is instrumental in establishing international research collaborations and transforming core $\text{IP}$ into market-ready, $\text{Horizon}$ $\text{Europe}$ ready solutions.",
     email: 'info@unleashifai.com',
-    //linkedin: 'https://linkedin.com/in/jihocho',
-    //twitter: 'https://twitter.com/jihocho',
+    linkedin: ' ',
+    twitter: ' ',
   },
   {
     name: 'J. Jeong',
