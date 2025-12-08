@@ -10,7 +10,7 @@ const ContactSection = () => {
     email: '',
     message: '',
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState({
@@ -19,14 +19,14 @@ const ContactSection = () => {
     email: '',
     message: '',
   });
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [id]: value
     }));
-    
+
     // Clear error when user starts typing
     if (errors[id as keyof typeof errors]) {
       setErrors(prev => ({
@@ -35,30 +35,30 @@ const ContactSection = () => {
       }));
     }
   };
-  
+
   const validateForm = (): boolean => {
     let isValid = true;
     const newErrors = { ...errors };
-    
+
     // Validate first name
     if (!formData.firstName.trim()) {
       newErrors.firstName = 'First name is required';
       isValid = false;
     }
-    
+
     // Validate last name
     if (!formData.lastName.trim()) {
       newErrors.lastName = 'Last name is required';
       isValid = false;
     }
-    
+
     // Validate email with regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim() || !emailRegex.test(formData.email)) {
       newErrors.email = 'Valid email is required';
       isValid = false;
     }
-    
+
     // Validate message
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
@@ -67,20 +67,20 @@ const ContactSection = () => {
       newErrors.message = 'Message must be at least 10 characters';
       isValid = false;
     }
-    
+
     setErrors(newErrors);
     return isValid;
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
-    
+
     setIsSubmitting(true);
-    
+
     // Simulate form submission with a delay
     setTimeout(() => {
       setIsSubmitting(false);
@@ -91,13 +91,13 @@ const ContactSection = () => {
         email: '',
         message: '',
       });
-      
+
       // Scroll to top of form for better feedback visibility
       const formElement = document.getElementById('contact-form');
       if (formElement) {
         formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-      
+
       // Reset form after some time
       setTimeout(() => {
         setIsSubmitted(false);
@@ -114,20 +114,20 @@ const ContactSection = () => {
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-black dark:text-white">Get In Touch</h2>
           <p className="text-gray-600 dark:text-gray-300 md:text-lg max-w-3xl mx-auto">
-            Have questions or ready to start your AI journey? Our team is here to help you 
+            Have questions or ready to start your AI journey? Our team is here to help you
             navigate the possibilities and find the perfect solution for your needs.
           </p>
           <div className="h-1 w-16 bg-purple-600 mx-auto mt-6"></div>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-12 lg:gap-24">
           <div>
             <div className="bg-white dark:bg-gray-900 p-8 md:p-10 rounded-2xl shadow-lg h-full border border-gray-100 dark:border-gray-800">
               <h3 className="text-2xl font-bold mb-6 text-black dark:text-white">Send us a message</h3>
-              
+
               {isSubmitted ? (
-                <div 
-                  className="bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-400 p-6 rounded-lg text-center" 
+                <div
+                  className="bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-400 p-6 rounded-lg text-center"
                   role="alert"
                   aria-live="assertive"
                 >
@@ -135,7 +135,7 @@ const ContactSection = () => {
                   <h4 className="text-xl font-bold mb-2 text-green-800 dark:text-green-400">Message Sent!</h4>
                   <p className="text-green-700 dark:text-green-300">Thank you for contacting us. We'll get back to you shortly.</p>
                   <p className="mt-4 text-green-700 dark:text-green-300">Our team usually responds within 1 business day.</p>
-                  <button 
+                  <button
                     onClick={() => setIsSubmitted(false)}
                     className="mt-4 px-4 py-2 bg-green-600 text-white text-sm rounded-lg hover:bg-green-700 transition-colors"
                   >
@@ -155,9 +155,8 @@ const ContactSection = () => {
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleChange}
-                        className={`w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border ${
-                          errors.firstName ? 'border-red-500 dark:border-red-500' : 'border-gray-200 dark:border-gray-700'
-                        } rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-colors dark:text-white`}
+                        className={`w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border ${errors.firstName ? 'border-red-500 dark:border-red-500' : 'border-gray-200 dark:border-gray-700'
+                          } rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-colors dark:text-white`}
                         placeholder="Your first name"
                         aria-required="true"
                         aria-invalid={errors.firstName ? "true" : "false"}
@@ -176,9 +175,8 @@ const ContactSection = () => {
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleChange}
-                        className={`w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border ${
-                          errors.lastName ? 'border-red-500 dark:border-red-500' : 'border-gray-200 dark:border-gray-700'
-                        } rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-colors dark:text-white`}
+                        className={`w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border ${errors.lastName ? 'border-red-500 dark:border-red-500' : 'border-gray-200 dark:border-gray-700'
+                          } rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-colors dark:text-white`}
                         placeholder="Your last name"
                         aria-required="true"
                         aria-invalid={errors.lastName ? "true" : "false"}
@@ -188,7 +186,7 @@ const ContactSection = () => {
                       )}
                     </div>
                   </div>
-                  
+
                   <div className="mb-6">
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       Email Address <span className="text-red-500">*</span>
@@ -199,9 +197,8 @@ const ContactSection = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border ${
-                        errors.email ? 'border-red-500 dark:border-red-500' : 'border-gray-200 dark:border-gray-700'
-                      } rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-colors dark:text-white`}
+                      className={`w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border ${errors.email ? 'border-red-500 dark:border-red-500' : 'border-gray-200 dark:border-gray-700'
+                        } rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-colors dark:text-white`}
                       placeholder="your.email@example.com"
                       aria-required="true"
                       aria-invalid={errors.email ? "true" : "false"}
@@ -210,7 +207,7 @@ const ContactSection = () => {
                       <p className="mt-1 text-sm text-red-500">{errors.email}</p>
                     )}
                   </div>
-                  
+
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       Message <span className="text-red-500">*</span>
@@ -221,9 +218,8 @@ const ContactSection = () => {
                       value={formData.message}
                       onChange={handleChange}
                       rows={5}
-                      className={`w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border ${
-                        errors.message ? 'border-red-500 dark:border-red-500' : 'border-gray-200 dark:border-gray-700'
-                      } rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-colors resize-none dark:text-white`}
+                      className={`w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border ${errors.message ? 'border-red-500 dark:border-red-500' : 'border-gray-200 dark:border-gray-700'
+                        } rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-colors resize-none dark:text-white`}
                       placeholder="How can we help you?"
                       aria-required="true"
                       aria-invalid={errors.message ? "true" : "false"}
@@ -232,15 +228,14 @@ const ContactSection = () => {
                       <p className="mt-1 text-sm text-red-500">{errors.message}</p>
                     )}
                   </div>
-                  
+
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full py-4 bg-black dark:bg-purple-600 text-white font-medium rounded-lg transition-all ${
-                      isSubmitting 
-                        ? 'opacity-75 cursor-not-allowed' 
+                    className={`w-full py-4 bg-black dark:bg-purple-600 text-white font-medium rounded-lg transition-all ${isSubmitting
+                        ? 'opacity-75 cursor-not-allowed'
                         : 'hover:bg-purple-900 dark:hover:bg-purple-700 hover:shadow-lg hover:shadow-purple-500/20'
-                    }`}
+                      }`}
                     aria-busy={isSubmitting ? "true" : "false"}
                   >
                     {isSubmitting ? (
@@ -250,7 +245,7 @@ const ContactSection = () => {
                       </span>
                     ) : 'Send Message'}
                   </button>
-                  
+
                   <div className="mt-4 space-y-2">
                     <p className="text-center text-sm text-gray-500 dark:text-gray-400">
                       We'll never share your information with third parties.
@@ -263,22 +258,25 @@ const ContactSection = () => {
               )}
             </div>
           </div>
-          
+
           <div className="flex flex-col">
             <div className="bg-black text-white dark:bg-gray-900 p-8 md:p-10 rounded-2xl mb-8 border border-gray-800">
               <h3 className="text-2xl font-bold mb-8">Contact Information</h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="bg-white/10 dark:bg-purple-600/20 p-3 rounded-full flex-shrink-0 mr-4">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold mb-1">Visit Us</h4>
-                    <p className="text-gray-300">69 Oakbriar Cres. ON K2J5G1</p>
+                    <h4 className="font-bold mb-1">Service Area</h4>
+                    <p className="text-gray-300">Ottawa - Toronto Area, Canada</p>
+                    <p className="text-gray-300 text-sm mt-1">(Local SMEs & Clinics)</p>
+                    <p className="text-gray-300 mt-2">Worldwide</p>
+                    <p className="text-gray-300 text-sm mt-1">(AI Solutions)</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-white/10 dark:bg-purple-600/20 p-3 rounded-full flex-shrink-0 mr-4">
                     <Phone className="w-5 h-5" />
@@ -288,7 +286,7 @@ const ContactSection = () => {
                     <p className="text-gray-300">+1-438-885-1872</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-white/10 dark:bg-purple-600/20 p-3 rounded-full flex-shrink-0 mr-4">
                     <Mail className="w-5 h-5" />
@@ -299,7 +297,7 @@ const ContactSection = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-12">
                 <h4 className="font-bold mb-4">Connect With Us</h4>
                 <div className="flex space-x-4">
@@ -321,7 +319,7 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white dark:bg-gray-900 p-8 md:p-10 rounded-2xl shadow-lg flex-grow border border-gray-100 dark:border-gray-800">
               <h3 className="text-2xl font-bold mb-6 text-black dark:text-white">Business Hours</h3>
               <div className="space-y-3">
@@ -341,23 +339,25 @@ const ContactSection = () => {
             </div>
           </div>
         </div>
-        
-        {/* Map placeholder - in production would be replaced with a real map */}
-        <div className="mt-16 h-96 bg-gray-200 dark:bg-gray-800 rounded-2xl relative overflow-hidden shadow-md">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-black dark:bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white">
-                <MapPin className="w-6 h-6" />
+
+        {/* Service Area Info */}
+        <div className="mt-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20 dark:from-purple-900/30 dark:to-blue-900/30 rounded-2xl p-12 border border-purple-200 dark:border-purple-800">
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white">
+              <MapPin className="w-8 h-8" />
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">Our Service Coverage</h3>
+            <div className="grid md:grid-cols-2 gap-8 mt-8">
+              <div className="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
+                <h4 className="font-bold text-lg mb-2 text-black dark:text-white">Local Services</h4>
+                <p className="text-purple-600 dark:text-purple-400 font-semibold mb-2">Ottawa - Toronto Area, Canada</p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">Full-service IT & AI adaptation for professional practices, SMEs, and clinics</p>
               </div>
-              <p className="font-medium text-gray-800 dark:text-gray-200">69 Oakbriar Cres. ON K2J5G1</p>
-              <a 
-                href="https://maps.google.com/?q=69+Oakbriar+Cres+ON+K2J5G1" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="mt-4 inline-block px-4 py-2 bg-black dark:bg-purple-600 text-white text-sm rounded-lg hover:bg-purple-900 dark:hover:bg-purple-700 transition-colors"
-              >
-                Get Directions
-              </a>
+              <div className="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
+                <h4 className="font-bold text-lg mb-2 text-black dark:text-white">Global Services</h4>
+                <p className="text-purple-600 dark:text-purple-400 font-semibold mb-2">Worldwide</p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">Custom AI solutions, strategic modeling, and high-value consulting</p>
+              </div>
             </div>
           </div>
         </div>

@@ -1,59 +1,68 @@
 'use client';
 
 import React, { useState } from 'react';
-import { 
-  BrainCircuit, 
-  Zap, 
-  LineChart, 
-  Sparkles, 
-  MessagesSquare, 
-  ShieldCheck 
-} from 'lucide-react';
+import { Rocket, Shield, Eye, Cpu, TrendingUp, Lock, Globe, Zap } from 'lucide-react';
 
-const services = [
+const pillars = [
   {
-    icon: <BrainCircuit className="w-6 h-6" />,
-    title: 'AI Strategy & Consulting',
-    description: 'We help you identify opportunities for AI implementation, develop a roadmap, and build a comprehensive strategy aligned with your business goals.',
-    details: 'Our strategic consulting includes current-state assessment, opportunity identification, competitive analysis, roadmap development, and implementation planning. We ensure your AI initiatives align with overall business objectives and deliver measurable value.',
+    id: 1,
+    icon: <Rocket className="w-8 h-8" />,
+    emoji: '🚀',
+    title: 'Pillar I: Custom AI Solutions & Strategic Modeling',
+    subtitle: 'The Innovation & Growth Accelerator',
+    description: 'This track is dedicated to pioneering proprietary, high-value AI models and strategic solutions for unique, complex technical challenges. We translate cutting-edge research into market-ready advantage.',
+    targetAudience: 'B2B Enterprises, Government/Research Partners, and Technology Firms seeking a decisive competitive advantage.',
+    focusAreas: [
+      {
+        icon: <Eye className="w-5 h-5" />,
+        title: 'Advanced Vision Systems',
+        description: 'Engineer solutions that transform complex image and video data into real-time analytical and predictive insights. We deliver operational certainty and minimize risk through specialized detection models for infrastructure and industrial safety.'
+      },
+      {
+        icon: <Cpu className="w-5 h-5" />,
+        title: 'Digital Twins & Simulation',
+        description: 'Utilize high-fidelity modeling to analyze, optimize, and stress-test complex operational and organizational systems before implementation.'
+      },
+      {
+        icon: <TrendingUp className="w-5 h-5" />,
+        title: 'High-Value Consulting',
+        description: 'Provide senior technical advising and roadmap development, guiding executive leadership on integrating specialized AI technologies into core business offerings and creating new revenue streams.'
+      }
+    ]
   },
   {
-    icon: <Zap className="w-6 h-6" />,
-    title: 'Custom AI Solutions',
-    description: 'We design and develop tailored AI solutions that address your specific business challenges, from predictive analytics to computer vision and NLP.',
-    details: 'Our development process includes requirements gathering, solution architecture, model development, integration with existing systems, testing, and deployment. We focus on creating AI solutions that seamlessly integrate with your current tech stack.',
-  },
-  {
-    icon: <LineChart className="w-6 h-6" />,
-    title: 'Data Analytics & Insights',
-    description: 'We transform your raw data into actionable insights using advanced analytics, machine learning, and visualization tools to drive informed decision-making.',
-    details: 'Our data analytics services include data collection and preparation, exploratory analysis, predictive modeling, interactive visualization, and insights delivery. We help you uncover hidden patterns and make data-driven decisions.',
-  },
-  {
-    icon: <Sparkles className="w-6 h-6" />,
-    title: 'AI-Powered Automation',
-    description: 'We automate repetitive tasks and workflows using intelligent solutions that learn and improve over time, increasing efficiency and reducing operational costs.',
-    details: 'Our automation services include process assessment, intelligent workflow design, RPA implementation, ML-enhanced automation, and continuous monitoring and improvement. We focus on high-value automation that delivers significant ROI.',
-  },
-  {
-    icon: <MessagesSquare className="w-6 h-6" />,
-    title: 'Conversational AI',
-    description: 'We build intelligent virtual assistants and chatbots that engage with your customers naturally, improving service quality while reducing support costs.',
-    details: 'Our conversational AI services include use case definition, conversation flow design, NLP model development, integration with communication channels, and continuous learning implementation. We create AI assistants that understand intent and deliver helpful responses.',
-  },
-  {
-    icon: <ShieldCheck className="w-6 h-6" />,
-    title: 'AI Security & Compliance',
-    description: 'We ensure your AI systems are secure, transparent, and compliant with relevant regulations, building trust with your customers and stakeholders.',
-    details: 'Our AI governance services include risk assessment, bias detection and mitigation, privacy protection, regulatory compliance, transparency implementation, and security hardening. We help you build AI that is not only powerful but also ethical and trustworthy.',
-  },
+    id: 2,
+    icon: <Shield className="w-8 h-8" />,
+    emoji: '🛡️',
+    title: 'Pillar II: IT & AI Adaptation for Professional Practices',
+    subtitle: 'The Operational Excellence Foundation',
+    description: 'This track focuses on building a secure, stable, and compliant IT infrastructure tailored specifically for specialized SMEs—such as medical, dental, and legal practices—preparing them for digital fluency and future growth.',
+    targetAudience: 'Medical, Dental, and Professional Service Clinics seeking reliability, security, and smart operational efficiency.',
+    focusAreas: [
+      {
+        icon: <Lock className="w-5 h-5" />,
+        title: 'System Stability & Compliance',
+        description: 'Implement robust data security frameworks, define automated backup protocols, and ensure critical compliance standards are met for handling sensitive client data. We eliminate operational downtime and minimize legal risks.'
+      },
+      {
+        icon: <Globe className="w-5 h-5" />,
+        title: 'Digital Integration & Marketing',
+        description: 'Design and manage highly functional digital platforms (websites, applications) integrated with targeted digital marketing strategies to actively generate reliable revenue streams.'
+      },
+      {
+        icon: <Zap className="w-5 h-5" />,
+        title: 'AI Readiness & Automation',
+        description: 'Structure the foundational IT architecture needed for a seamless transition into advanced automation and strategic AI tools. We ensure your practice is prepared for the next wave of efficiency.'
+      }
+    ]
+  }
 ];
 
 const ServicesSection = () => {
-  const [activeTab, setActiveTab] = useState<number | null>(null);
+  const [activePillar, setActivePillar] = useState<number | null>(null);
 
-  const toggleTab = (index: number) => {
-    setActiveTab(activeTab === index ? null : index);
+  const togglePillar = (id: number) => {
+    setActivePillar(activePillar === id ? null : id);
   };
 
   return (
@@ -64,65 +73,118 @@ const ServicesSection = () => {
             Our Services
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-black dark:text-white">
-            Expert AI Solutions Tailored for Your Business
+            Our Two Core Pillars of Service
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            We offer a comprehensive suite of AI services designed to drive innovation, 
-            efficiency, and growth across your organization.
+          <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            We offer two distinct, high-impact consulting tracks—each guided by scientific rigor and senior executive strategy—to ensure your business achieves maximum operational efficiency and sustainable growth.
           </p>
           <div className="h-1 w-16 bg-purple-600 mx-auto mt-6"></div>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index} 
-              className={`bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-8 rounded-xl transition-all duration-300 cursor-pointer ${
-                activeTab === index 
-                  ? 'ring-2 ring-purple-600 shadow-xl transform -translate-y-1' 
-                  : 'hover:shadow-lg hover:-translate-y-1'
-              }`}
-              onClick={() => toggleTab(index)}
+
+        <div className="space-y-8">
+          {pillars.map((pillar) => (
+            <div
+              key={pillar.id}
+              className={`bg-white dark:bg-gray-900 border-2 rounded-2xl overflow-hidden transition-all duration-300 ${activePillar === pillar.id
+                ? 'border-purple-600 shadow-2xl'
+                : 'border-gray-200 dark:border-gray-800 hover:border-purple-400 dark:hover:border-purple-600'
+                }`}
             >
-              <div className="w-14 h-14 bg-black dark:bg-purple-600 text-white rounded-xl flex items-center justify-center mb-6">
-                {service.icon}
+              {/* Pillar Header */}
+              <div
+                className="p-8 cursor-pointer"
+                onClick={() => togglePillar(pillar.id)}
+              >
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-500 rounded-xl flex items-center justify-center text-white shadow-lg">
+                      {pillar.icon}
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-3xl">{pillar.emoji}</span>
+                      <h3 className="text-2xl md:text-3xl font-bold text-black dark:text-white">
+                        {pillar.title}
+                      </h3>
+                    </div>
+                    <p className="text-purple-600 dark:text-purple-400 font-semibold text-lg mb-3">
+                      {pillar.subtitle}
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                      {pillar.description}
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`w-6 h-6 text-gray-400 transition-transform duration-300 ${activePillar === pillar.id ? 'rotate-180' : ''
+                        }`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-4 text-black dark:text-white">{service.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">{service.description}</p>
-              <div className="flex items-center text-sm font-medium text-black dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                {activeTab === index ? 'Read Less' : 'Read More'}
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  className={`ml-1 w-4 h-4 transition-transform duration-200 ${
-                    activeTab === index ? 'rotate-180' : ''
-                  }`}
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-              
-              {activeTab === index && (
-                <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
-                  <p className="text-gray-600 dark:text-gray-300">{service.details}</p>
+
+              {/* Focus Areas - Expanded Content */}
+              {activePillar === pillar.id && (
+                <div className="border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-black/50">
+                  <div className="p-8">
+                    <h4 className="text-xl font-bold text-black dark:text-white mb-6">What We Do</h4>
+                    <div className="space-y-4">
+                      {pillar.focusAreas.map((area, index) => (
+                        <div
+                          key={index}
+                          className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6"
+                        >
+                          <div className="flex items-start gap-4">
+                            <div className="flex-shrink-0 w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-400">
+                              {area.icon}
+                            </div>
+                            <div className="flex-1">
+                              <h5 className="text-lg font-bold text-black dark:text-white mb-2">
+                                {area.title}
+                              </h5>
+                              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                {area.description}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Who It's For Section */}
+                    <div className="mt-8 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-200 dark:border-purple-800">
+                      <h5 className="text-sm font-bold text-purple-900 dark:text-purple-300 uppercase tracking-wide mb-2">
+                        Who It's For
+                      </h5>
+                      <p className="text-gray-700 dark:text-gray-300">
+                        {pillar.targetAudience}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
           ))}
         </div>
-        
+
+        {/* CTA Section */}
         <div className="mt-20 bg-black text-white dark:bg-purple-900/30 rounded-2xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-10 lg:p-16">
-              <h3 className="text-3xl font-bold mb-6">Ready to transform your business with AI?</h3>
+              <h3 className="text-3xl font-bold mb-6">Ready to elevate your professional practice with strategic AI?</h3>
               <p className="text-gray-300 text-lg mb-8">
-                Whether you're just starting your AI journey or looking to enhance your existing capabilities, 
-                our team of experts is ready to help you unleash the full potential of artificial intelligence.
+                Whether you're seeking to enhance compliance, mitigate operational risks, or drive strategic growth,
+                our executive-level expertise is ready to deliver premium AI solutions tailored to your professional practice.
               </p>
               <button className="px-6 py-3 bg-white text-black dark:bg-purple-600 dark:text-white font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-purple-700 transition-colors shadow-lg">
-                Start Your AI Transformation
+                Schedule Strategic Consultation
               </button>
             </div>
             <div className="bg-gradient-to-r from-purple-900/80 to-black p-10 lg:p-16 flex items-center">
@@ -131,25 +193,25 @@ const ServicesSection = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-white">Custom Solutions for Any Business</span>
+                  <span className="text-white">Specialized Solutions for Professional Practices</span>
                 </div>
                 <div className="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-white">Expert Team of AI Specialists</span>
+                  <span className="text-white">Executive-Level AI & Compliance Expertise</span>
                 </div>
                 <div className="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-white">96% Client Satisfaction Rate</span>
+                  <span className="text-white">Confidential & Secure Approach</span>
                 </div>
                 <div className="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-white">Transparent, Ethical Approach</span>
+                  <span className="text-white">Premium Service, Measurable Results</span>
                 </div>
               </div>
             </div>

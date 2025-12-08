@@ -9,13 +9,13 @@ const HeroSection = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-16 md:mb-0">
             <div className="mb-6 inline-block px-4 py-1.5 bg-black/5 dark:bg-white/5 text-black dark:text-white font-medium text-sm rounded-full">
-              Next-Generation AI Solutions
+              Strategic AI for Professional Practices
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Unleash the power of <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500">AI</span> for your business
+              Unleash the power of <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500">AI</span> for your professional practice
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-lg">
-              We combine cutting-edge AI technology with industry expertise to transform how businesses operate, innovate, and grow.
+              We combine executive-level AI expertise with deep regulatory knowledge to transform professional practices through compliant, strategic solutions that mitigate risk and drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="px-8 py-3.5 bg-black dark:bg-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-purple-900 dark:hover:bg-purple-700">
@@ -33,7 +33,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Scroll indicator */}
         <div className="hidden md:flex justify-center mt-16">
           <div className="animate-bounce bg-white dark:bg-gray-800 p-2 w-10 h-10 ring-1 ring-gray-200 dark:ring-gray-700 shadow-lg rounded-full flex items-center justify-center">
@@ -61,7 +61,7 @@ const HeroGraphic = () => (
         repeatCount="indefinite"
       />
     </circle>
-    
+
     {/* Nodes with pulse animation */}
     <circle cx="150" cy="60" r="8" fill="#000000">
       <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite" />
@@ -75,7 +75,7 @@ const HeroGraphic = () => (
     <circle cx="60" cy="150" r="8" fill="#000000">
       <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite" begin="1.5s" />
     </circle>
-    
+
     <circle cx="195" cy="75" r="6" fill="#ffffff" stroke="#000000" strokeWidth="1" />
     <circle cx="225" cy="105" r="6" fill="#ffffff" stroke="#000000" strokeWidth="1" />
     <circle cx="225" cy="195" r="6" fill="#ffffff" stroke="#000000" strokeWidth="1" />
@@ -84,17 +84,17 @@ const HeroGraphic = () => (
     <circle cx="75" cy="195" r="6" fill="#ffffff" stroke="#000000" strokeWidth="1" />
     <circle cx="75" cy="105" r="6" fill="#ffffff" stroke="#000000" strokeWidth="1" />
     <circle cx="105" cy="75" r="6" fill="#ffffff" stroke="#000000" strokeWidth="1" />
-    
+
     <circle cx="150" cy="150" r="12" fill="#000000">
       <animate attributeName="r" values="12;14;12" dur="3s" repeatCount="indefinite" />
     </circle>
-    
+
     {/* Connections */}
     <line x1="150" y1="60" x2="150" y2="150" stroke="#000000" strokeWidth="1" />
     <line x1="240" y1="150" x2="150" y2="150" stroke="#000000" strokeWidth="1" />
     <line x1="150" y1="240" x2="150" y2="150" stroke="#000000" strokeWidth="1" />
     <line x1="60" y1="150" x2="150" y2="150" stroke="#000000" strokeWidth="1" />
-    
+
     <line x1="195" y1="75" x2="150" y2="150" stroke="#000000" strokeWidth="0.5" strokeDasharray="3 3">
       <animate attributeName="strokeDashoffset" from="0" to="24" dur="20s" repeatCount="indefinite" />
     </line>
