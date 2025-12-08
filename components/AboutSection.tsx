@@ -34,10 +34,10 @@ const AboutSection = () => {
                 <div className="w-12 h-12 bg-black dark:bg-purple-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-black dark:text-white">Our Vision</h3>
+                <h3 className="text-2xl font-bold text-black dark:text-white">Our Mission</h3>
               </div>
               <p className="text-gray-600 dark:text-gray-300 ml-16">
-                At UnleashifAI, we combine executive-level AI expertise with deep regulatory knowledge to serve professional practices. Our solutions address industry-specific compliance requirements (HIPAA, building codes, professional standards) while delivering measurable ROI and strategic value.
+                We serve two distinct markets: developing custom AI solutions for enterprises worldwide, and providing comprehensive IT & AI services to local small businesses and professional practices in the Ottawa-Toronto area.
               </p>
             </div>
 

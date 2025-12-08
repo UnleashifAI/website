@@ -15,7 +15,7 @@ const HeroSection = () => {
               Unleash the power of <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500">AI</span> for your professional practice
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-lg">
-              We combine executive-level AI expertise with deep regulatory knowledge to transform professional practices through compliant, strategic solutions that mitigate risk and drive growth.
+              We deliver two distinct services: custom AI solutions for enterprises worldwide, and comprehensive IT & AI support for local small businesses and professional practices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button

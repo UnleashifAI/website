@@ -37,7 +37,7 @@ const pillars = [
     title: 'Pillar II: IT & AI Adaptation for Professional Practices',
     subtitle: 'The Operational Excellence Foundation',
     description: 'This track focuses on building a secure, stable, and compliant IT infrastructure tailored specifically for specialized SMEs—such as medical, dental, and legal practices—preparing them for digital fluency and future growth.',
-    targetAudience: 'Medical, Dental, and Professional Service Clinics seeking reliability, security, and smart operational efficiency.',
+    targetAudience: 'Local small businesses, medical/dental clinics, and professional service practices (Ottawa-Toronto area) seeking reliable IT infrastructure, security, and operational efficiency.',
     focusAreas: [
       {
         icon: <Lock className="w-5 h-5" />,
