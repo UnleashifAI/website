@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
           <div className="md:col-span-2">
             <div className="text-xl font-bold mb-6">
-              unleashif<span className="text-purple-500">AI</span>
+              Unleashif<span className="text-purple-500">AI</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               Executive-level AI expertise combined with deep regulatory knowledge to deliver strategic solutions for professional practices and enterprises worldwide.
@@ -75,7 +75,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            © {currentYear} unleashifAI. All rights reserved.
+            © {currentYear} UnleashifAI. All rights reserved.
           </p>
 
           <div className="flex space-x-6">

@@ -18,10 +18,16 @@ const HeroSection = () => {
               We combine executive-level AI expertise with deep regulatory knowledge to transform professional practices through compliant, strategic solutions that mitigate risk and drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-3.5 bg-black dark:bg-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-purple-900 dark:hover:bg-purple-700">
+              <button
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-3.5 bg-black dark:bg-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-purple-900 dark:hover:bg-purple-700"
+              >
                 Get Started
               </button>
-              <button className="px-8 py-3.5 border border-gray-300 dark:border-gray-700 rounded-lg hover:border-purple-500 hover:text-purple-700 dark:hover:text-purple-400 transition-all duration-300 font-medium">
+              <button
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-3.5 border border-gray-300 dark:border-gray-700 rounded-lg hover:border-purple-500 hover:text-purple-700 dark:hover:text-purple-400 transition-all duration-300 font-medium"
+              >
                 Book a Demo
               </button>
             </div>

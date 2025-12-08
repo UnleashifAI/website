@@ -183,7 +183,10 @@ const ServicesSection = () => {
                 Whether you're seeking to enhance compliance, mitigate operational risks, or drive strategic growth,
                 our executive-level expertise is ready to deliver premium AI solutions tailored to your professional practice.
               </p>
-              <button className="px-6 py-3 bg-white text-black dark:bg-purple-600 dark:text-white font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-purple-700 transition-colors shadow-lg">
+              <button
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-6 py-3 bg-white text-black dark:bg-purple-600 dark:text-white font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-purple-700 transition-colors shadow-lg"
+              >
                 Schedule Strategic Consultation
               </button>
             </div>

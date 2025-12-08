@@ -37,7 +37,7 @@ const AboutSection = () => {
                 <h3 className="text-2xl font-bold text-black dark:text-white">Our Vision</h3>
               </div>
               <p className="text-gray-600 dark:text-gray-300 ml-16">
-                At unleashifAI, we combine executive-level AI expertise with deep regulatory knowledge to serve professional practices. Our solutions address industry-specific compliance requirements (HIPAA, building codes, professional standards) while delivering measurable ROI and strategic value.
+                At UnleashifAI, we combine executive-level AI expertise with deep regulatory knowledge to serve professional practices. Our solutions address industry-specific compliance requirements (HIPAA, building codes, professional standards) while delivering measurable ROI and strategic value.
               </p>
             </div>
 

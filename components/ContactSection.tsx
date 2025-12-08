@@ -233,8 +233,8 @@ const ContactSection = () => {
                     type="submit"
                     disabled={isSubmitting}
                     className={`w-full py-4 bg-black dark:bg-purple-600 text-white font-medium rounded-lg transition-all ${isSubmitting
-                        ? 'opacity-75 cursor-not-allowed'
-                        : 'hover:bg-purple-900 dark:hover:bg-purple-700 hover:shadow-lg hover:shadow-purple-500/20'
+                      ? 'opacity-75 cursor-not-allowed'
+                      : 'hover:bg-purple-900 dark:hover:bg-purple-700 hover:shadow-lg hover:shadow-purple-500/20'
                       }`}
                     aria-busy={isSubmitting ? "true" : "false"}
                   >
@@ -318,22 +318,15 @@ const ContactSection = () => {
                   </a>
                 </div>
               </div>
-            </div>
 
-            <div className="bg-white dark:bg-gray-900 p-8 md:p-10 rounded-2xl shadow-lg flex-grow border border-gray-100 dark:border-gray-800">
-              <h3 className="text-2xl font-bold mb-6 text-black dark:text-white">Business Hours</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center border-b border-gray-100 dark:border-gray-800 pb-3">
-                  <span className="font-medium text-black dark:text-white">Monday - Friday</span>
-                  <span className="text-gray-600 dark:text-gray-300">9:00 AM - 6:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center border-b border-gray-100 dark:border-gray-800 pb-3">
-                  <span className="font-medium text-black dark:text-white">Saturday</span>
-                  <span className="text-gray-600 dark:text-gray-300">10:00 AM - 4:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="font-medium text-black dark:text-white">Sunday</span>
-                  <span className="text-gray-600 dark:text-gray-300">Closed</span>
+              <div className="mt-12 pt-8 border-t border-gray-700">
+                <div className="bg-purple-900/30 p-4 rounded-lg">
+                  <p className="text-center text-white font-semibold">
+                    📞 Consultations Available Anytime
+                  </p>
+                  <p className="text-center text-gray-300 text-sm mt-2">
+                    Contact us via email or phone for flexible scheduling
+                  </p>
                 </div>
               </div>
             </div>

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'unleashifAI - Unleash Your Potential',
+  title: 'UnleashifAI - Unleash Your Potential',
   description: 'Premium AI solutions to transform how businesses operate, innovate, and grow.',
 };
 
