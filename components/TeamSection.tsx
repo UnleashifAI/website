@@ -20,28 +20,28 @@ const teamMembers = [
   },
   {
     name: 'Core R&D Team',
-    role: 'Algorithmic Engineering & Simulation',
-    bio: 'Our engineering team consists of top-tier talent sourced from leading North American research institutions, specializing in Physics-Informed Neural Networks (PINNs), Manufacturing Foundation AI Models, and embedded edge deployment.',
+    role: 'Visual Perception & Edge AI Engineering',
+    bio: 'A diverse, cross-continental engineering unit uniting emerging AI researchers and fellowship scholars from leading North American and Asian institutions. The team specializes in translating theoretical Visual Perception and Edge AI models into robust, real-time industrial inspection systems.',
     email: 'info@unleashifai.com',
     linkedin: ' ',
     twitter: ' ',
     highlights: [
-      { icon: <ScrollText className="w-4 h-4" />, text: 'Specialized in PINNs & Foundation Models' },
-      { icon: <Trophy className="w-4 h-4" />, text: 'Direct Ties with Top-Tier Academia' },
-      { icon: <Presentation className="w-4 h-4" />, text: 'Advanced Edge Deployment Native' }
+      { icon: <ScrollText className="w-4 h-4" />, text: 'Cross-Continental R&D Network' },
+      { icon: <Trophy className="w-4 h-4" />, text: 'Government-Backed Fellowship Scholars' },
+      { icon: <Presentation className="w-4 h-4" />, text: 'Edge AI & Inspection Specialists' }
     ]
   },
   {
     name: 'Strategic Advisory Board',
-    role: 'Industrial & Government Partnerships',
-    bio: 'Guiding the commercialization roadmap between lab research and factory floor deployment. Our advisors bring decades of executive experience from global automotive manufacturing (OEMs), aerospace, and North American regulatory bodies.',
+    role: 'Academic & Mobility Industry Partners',
+    bio: 'Guided by an international network of tenured professors spanning North America and East Asia, fortified by senior R&D leadership from a premier European automotive supplier. The board ensures our innovations remain academically rigorous while perfectly aligning with Tier-1 commercial manufacturing pipelines.',
     email: 'info@unleashifai.com',
     linkedin: ' ',
     twitter: ' ',
     highlights: [
-      { icon: <Trophy className="w-4 h-4" />, text: 'Ex-Global OEM Executives' },
-      { icon: <ScrollText className="w-4 h-4" />, text: 'Government Grant & Policy Experts' },
-      { icon: <Presentation className="w-4 h-4" />, text: 'Bridging Lab-to-Market Gap' }
+      { icon: <Trophy className="w-4 h-4" />, text: 'Global Tier-1 Automotive R&D Leadership' },
+      { icon: <ScrollText className="w-4 h-4" />, text: 'Tenured Academic Professors' },
+      { icon: <Presentation className="w-4 h-4" />, text: 'Bridging Lab-to-Market Pipelines' }
     ]
   },
 ];
