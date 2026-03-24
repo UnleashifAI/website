@@ -80,7 +80,7 @@ const AboutSection = () => {
         <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             { number: '3+', label: 'Active Joint R&D Programs' },
-            { number: '100%', label: 'Proprietary AI Architectures' },
+            { number: '100%', label: 'Proprietary AI Systems' },
             { number: 'Top-Tier', label: 'Academic R&D Network' },
             { number: 'Federal', label: 'Joint R&D Partner' }
           ].map((stat, index) => (
