@@ -319,7 +319,7 @@ const ContactSection = () => {
               <div className="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
                 <h4 className="font-bold text-lg mb-2 text-black dark:text-white">International Collaboration</h4>
                 <p className="text-purple-600 dark:text-purple-400 font-semibold mb-2">Asia-Pacific & Europe</p>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">Joint R&D projects with industrial partners in Smart Manufacturing, Aerospace, and Automotive sectors</p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">Expanding North American and global R&D partnerships to deploy robust Edge AI solutions across Aerospace, Smart Manufacturing, and Advanced Automotive sectors.</p>
               </div>
             </div>
           </div>

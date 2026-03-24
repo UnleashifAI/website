@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Cpu, Eye, Network, Zap, Settings, ShieldAlert, Monitor, ArrowRight } from 'lucide-react';
+import { Cpu, Eye, Network, Zap, Settings, ShieldAlert, Monitor, ArrowRight, Navigation } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
 const coreTechnologies = [
@@ -62,6 +62,26 @@ const coreTechnologies = [
         icon: <ArrowRight className="w-5 h-5" />,
         title: 'HRC Safety Monitoring',
         description: 'Active, intelligent monitoring overlays that synchronize robotic workflows with human presence, drastically reducing the risk of workplace accidents.'
+      }
+    ]
+  },
+  {
+    id: 4,
+    icon: <Navigation className="w-8 h-8" />,
+    title: 'Autonomous Mobility Perception',
+    subtitle: 'Mission-Critical Vision for CCAM Systems',
+    description: 'Developing reliable computer vision and Edge AI software to identify and interpret pedestrians, vehicles, and dynamic obstacles under unpredictable real-world driving conditions.',
+    targetAudience: 'Top-tier automotive manufacturers, AV solution providers, and CCAM infrastructural networks.',
+    focusAreas: [
+      {
+        icon: <Eye className="w-5 h-5" />,
+        title: 'Dynamic Obstacle Recognition',
+        description: 'Real-time semantic segmentation and object detection under extreme lighting and weather constraints.'
+      },
+      {
+        icon: <Zap className="w-5 h-5" />,
+        title: 'Low-Latency Decision Processing',
+        description: 'Microsecond-level inference loops allowing autonomous controllers to react instantly to sudden trajectory shifts.'
       }
     ]
   }
@@ -186,7 +206,7 @@ const ServicesSection = () => {
             <div className="p-10 lg:p-16">
               <h3 className="text-3xl lg:text-4xl font-extrabold mb-6 tracking-tight">Deploy Mission-Critical AI in Your Facilities</h3>
               <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-                Partner with us to integrate heavily researched and proven AI algorithms into your manufacturing or aerospace systems. We bridge the gap between academic breakthroughs and industrial robustness.
+                Partner with us to integrate heavily researched and proven AI algorithms into your manufacturing, aerospace, or advanced mobility systems. We bridge the gap between academic breakthroughs and industrial robustness.
               </p>
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}

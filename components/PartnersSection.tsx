@@ -45,6 +45,13 @@ const ecosystemCategories = [
         width: 160,
         height: 80,
       },
+      {
+        name: 'University of Windsor',
+        logo: '/windsor-logo.png',
+        role: 'Joint R&D in Autonomous Mobility & Edge AI',
+        width: 220,
+        height: 70,
+      },
     ],
   },
   {
