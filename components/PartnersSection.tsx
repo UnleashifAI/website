@@ -158,7 +158,7 @@ const PartnersSection = () => {
         <ScrollReveal delay={0.3}>
           <div className="mt-20 bg-gradient-to-r from-purple-900/10 to-blue-900/10 dark:from-purple-900/20 dark:to-blue-900/20 rounded-2xl p-8 border border-purple-200 dark:border-purple-800/50 text-center">
             <p className="text-gray-700 dark:text-gray-300 text-lg font-medium">
-              A growing network spanning <span className="text-purple-600 dark:text-purple-400 font-bold">3 countries</span>, bridging government-funded research with real-world industrial deployment.
+              A growing network spanning <span className="text-purple-600 dark:text-purple-400 font-bold">North America & Asia</span>, bridging government-funded research with real-world industrial deployment.
             </p>
           </div>
         </ScrollReveal>
