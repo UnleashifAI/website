@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Microscope, Activity, ShieldCheck, ChevronRight } from 'lucide-react';
+import { Microscope, Activity, ShieldCheck, Cpu, ChevronRight } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
 const AboutSection = () => {
@@ -24,7 +24,7 @@ const AboutSection = () => {
         </ScrollReveal>
 
         <ScrollReveal delay={0.15}>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
           {/* Project 1 */}
           <div className="bg-white dark:bg-black border border-gray-100 dark:border-gray-800 rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300">
             <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-6">
@@ -58,6 +58,18 @@ const AboutSection = () => {
             <h3 className="text-xl font-bold mb-3 text-black dark:text-white">Mission-Critical HRI Safety Monitoring</h3>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
               Engineering multimodal AI architectures for worker cognitive load detection and real-time safety distance (ISO 10218) monitoring in high-risk human-robot interaction environments.
+            </p>
+          </div>
+
+          {/* Project 4 */}
+          <div className="bg-white dark:bg-black border border-gray-100 dark:border-gray-800 rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+            <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-6">
+              <Cpu className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+            </div>
+            <p className="text-purple-600 dark:text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">Autonomous Systems</p>
+            <h3 className="text-xl font-bold mb-3 text-black dark:text-white">Real-time Anomaly & Damage Detection</h3>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+              Deploying high-speed edge AI architectures for real-time anomaly interpretation and micro-defect classification across autonomous mobility and vehicular systems.
             </p>
           </div>
         </div>

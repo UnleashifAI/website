@@ -20,8 +20,8 @@ const coreTechnologies = [
       },
       {
         icon: <Settings className="w-5 h-5" />,
-        title: 'Real-Time Control Systems',
-        description: 'Deploying robust control algorithms on microcontrollers (MCUs) and FPGAs for instantaneous hardware actuation.'
+        title: 'Real-time Anomaly & Damage Detection',
+        description: 'Deploying robust edge inference models for real-time anomaly interpretation and micro-defect classification in autonomous mobility and robotic systems.'
       }
     ]
   },
