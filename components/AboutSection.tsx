@@ -24,57 +24,41 @@ const AboutSection = () => {
         </ScrollReveal>
 
         <ScrollReveal delay={0.15}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-16">
-          {/* Featured Project */}
-          <div className="bg-gradient-to-br from-black/5 to-white dark:from-white/5 dark:to-black rounded-2xl p-8 shadow-lg relative overflow-hidden border border-gray-100 dark:border-gray-800">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-purple-600/10 rounded-bl-full -z-0"></div>
-            <div className="relative z-10">
-              <div className="w-16 h-16 bg-black dark:bg-purple-600 rounded-xl mb-6 flex items-center justify-center shadow-md">
-                <Microscope className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-black dark:text-white">National Research Council (NRC) of Canada</h3>
-              <p className="text-purple-600 dark:text-purple-400 font-semibold mb-4">Aerospace Coating Inspection Project</p>
-              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                Awarded an exclusive research grant by the NRC to develop highly precise visual perception algorithms capable of inspecting aerospace-grade defensive coatings. Our edge-ai solutions dramatically reduced inspection latency while maintaining sub-millimeter precision on critical aircraft components.
-              </p>
-              <div className="flex items-center text-sm font-bold text-black dark:text-white uppercase tracking-wider">
-                Funding Secured <ChevronRight className="w-4 h-4 ml-1 text-purple-600" />
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          {/* Project 1 */}
+          <div className="bg-white dark:bg-black border border-gray-100 dark:border-gray-800 rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+            <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-6">
+              <Microscope className="w-6 h-6 text-purple-600 dark:text-purple-400" />
             </div>
+            <p className="text-purple-600 dark:text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">NRC Funded</p>
+            <h3 className="text-xl font-bold mb-3 text-black dark:text-white">Aerospace Coating Inspection</h3>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+              Developing AI-based vision inspection software for the Thermal Gradient Shock Tester (TGST), ensuring sub-millimeter precision for critical aerospace defensive coatings.
+            </p>
           </div>
 
-          <div className="space-y-8">
-            {/* Mitacs Project */}
-            <div className="bg-white dark:bg-black border border-gray-100 dark:border-gray-800 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-black dark:bg-purple-600/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <Activity className="w-6 h-6 text-white dark:text-purple-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-black dark:text-white">Mitacs Accelerate ($90k+ CAD)</h3>
-                  <p className="text-sm font-medium text-purple-600 dark:text-purple-400">Led Manufacturing Digital Twin Initiative</p>
-                </div>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 ml-16 leading-relaxed">
-                Successfully secured and directed a major government-backed R&D initiative to build Industrial Digital Twins for automotive machining processes. Integrated Physics-Informed Neural Networks (PINNs) directly with live sensor metrics.
-              </p>
+          {/* Project 2 */}
+          <div className="bg-white dark:bg-black border border-gray-100 dark:border-gray-800 rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+            <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-6">
+              <Activity className="w-6 h-6 text-purple-600 dark:text-purple-400" />
             </div>
+            <p className="text-purple-600 dark:text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">Mitacs & TIPA Linked</p>
+            <h3 className="text-xl font-bold mb-3 text-black dark:text-white">Autonomous Pre-process Setup for Smart Manufacturing</h3>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+              Deploying industrial digital twins and physics-informed AI optimization algorithms tailored for dynamic, high-mix job-shop manufacturing environments.
+            </p>
+          </div>
 
-            {/* University Partnership */}
-            <div className="bg-white dark:bg-black border border-gray-100 dark:border-gray-800 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-black dark:bg-purple-600/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <ShieldCheck className="w-6 h-6 text-white dark:text-purple-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-black dark:text-white">University Affiliations</h3>
-                  <p className="text-sm font-medium text-purple-600 dark:text-purple-400">e.g., University of Toronto</p>
-                </div>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 ml-16 leading-relaxed">
-                We operate as an advanced R&D bridge between world-class Canadian academic institutions and commercial partners (KETI, TIPA) to transform theoretical multimodal AI research into robust, scalable, deployable industrial products.
-              </p>
+          {/* Project 3 */}
+          <div className="bg-white dark:bg-black border border-gray-100 dark:border-gray-800 rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+            <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-6">
+              <ShieldCheck className="w-6 h-6 text-purple-600 dark:text-purple-400" />
             </div>
+            <p className="text-purple-600 dark:text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">IITP Linked</p>
+            <h3 className="text-xl font-bold mb-3 text-black dark:text-white">Mission-Critical HRI Safety Monitoring</h3>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+              Engineering multimodal AI architectures for worker cognitive load detection and real-time safety distance (ISO 10218) monitoring in high-risk human-robot interaction environments.
+            </p>
           </div>
         </div>
         </ScrollReveal>

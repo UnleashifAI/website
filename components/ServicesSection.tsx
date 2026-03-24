@@ -10,7 +10,7 @@ const coreTechnologies = [
     icon: <Cpu className="w-8 h-8" />,
     title: 'Edge AI (Low-Resource Deployments)',
     subtitle: 'Real-time AI for Hardware-Constrained Environments',
-    description: 'We specialize in compressing and optimizing advanced neural networks for on-device inference, enabling real-time control, monitoring, and decision-making directly at the edge—where it matters most.',
+    description: 'We specialize in low-resource adaptive transfer learning and compressing multimodal generative models for on-device inference, enabling real-time control, monitoring, and decision-making directly at the edge—where it matters most.',
     targetAudience: 'Automotive OEMs, Aerospace manufacturers, and field deployable smart systems requiring low-latency operations.',
     focusAreas: [
       {
@@ -30,7 +30,7 @@ const coreTechnologies = [
     icon: <Monitor className="w-8 h-8" />,
     title: 'Industrial Digital Twin',
     subtitle: 'Virtualizing the Physical Manufacturing Lifecycle',
-    description: 'We build high-fidelity Digital Twins using Industrial Machine Vision and Physics-Informed Neural Networks (PINNs) to simulate, predict, and optimize complex industrial processes, mitigating risks before physical execution.',
+    description: 'We build high-fidelity Digital Twins using a robust Manufacturing Foundation AI Model and Physics-Informed Graph Neural Networks to simulate, predict, and optimize complex industrial processes, mitigating risks before physical execution.',
     targetAudience: 'Smart Manufacturing facilities, CNC machining centers, and heavy industrial plant operators.',
     focusAreas: [
       {

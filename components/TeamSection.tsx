@@ -6,27 +6,27 @@ import ScrollReveal from './ScrollReveal';
 
 const teamMembers = [
   {
-    name: 'Dr. Cho',
+    name: 'Principal Investigator & Founder',
     role: 'C-Level Executive & Multinational R&D Director',
-    bio: "Over 15 Years of Global AI & Computer Vision R&D Experience spanning North America, Europe, and Asia. Successfully directed over $14M in Public-Private Tech Funding and Investment. A proven technical leader with extensive US patents (e.g., US 11,438,571) and deep ties to the global academic community, bridging the gap between academia and industry.",
+    bio: "Over 15 Years of Global AI & Visual Perception R&D Experience spanning North America, Europe, and Asia. Successfully directed $14M+ in Public-Private Tech Funding and investment for a North American Deep-tech Startup. A proven technical leader with multiple industrial AI patents and deep ties to the global academic community.",
     email: 'info@unleashifai.com',
     linkedin: ' ',
     twitter: ' ',
     highlights: [
-      { icon: <Trophy className="w-4 h-4" />, text: 'Over $14M in Public-Private Tech Funding' },
-      { icon: <ScrollText className="w-4 h-4" />, text: 'US Patent 11,438,571 Lead Inventor' },
-      { icon: <Presentation className="w-4 h-4" />, text: '15+ Years Global AI & CV R&D Experience' }
+      { icon: <Trophy className="w-4 h-4" />, text: 'Over $14M in Public-Private Funding' },
+      { icon: <ScrollText className="w-4 h-4" />, text: 'Multiple Industrial AI Patents' },
+      { icon: <Presentation className="w-4 h-4" />, text: '15+ Years Global AI R&D Experience' }
     ]
   },
   {
     name: 'Core R&D Team',
     role: 'Algorithmic Engineering & Simulation',
-    bio: 'Our engineering team consists of top-tier talent sourced from leading North American institutions (e.g., University of Toronto), specializing in Physics-Informed Neural Networks (PINNs), large-scale Industrial Machine Vision architectures, and embedded edge deployment.',
+    bio: 'Our engineering team consists of top-tier talent sourced from leading North American research institutions, specializing in Physics-Informed Neural Networks (PINNs), Manufacturing Foundation AI Models, and embedded edge deployment.',
     email: 'info@unleashifai.com',
     linkedin: ' ',
     twitter: ' ',
     highlights: [
-      { icon: <ScrollText className="w-4 h-4" />, text: 'Specialized in PINNs & Machine Vision' },
+      { icon: <ScrollText className="w-4 h-4" />, text: 'Specialized in PINNs & Foundation Models' },
       { icon: <Trophy className="w-4 h-4" />, text: 'Direct Ties with Top-Tier Academia' },
       { icon: <Presentation className="w-4 h-4" />, text: 'Advanced Edge Deployment Native' }
     ]
@@ -34,12 +34,12 @@ const teamMembers = [
   {
     name: 'Strategic Advisory Board',
     role: 'Industrial & Government Partnerships',
-    bio: 'Guiding the commercialization roadmap between lab research and factory floor deployment. Our advisors bring decades of experience from aerospace, automotive manufacturing (OEMs), and North American government regulatory bodies.',
+    bio: 'Guiding the commercialization roadmap between lab research and factory floor deployment. Our advisors bring decades of executive experience from global automotive manufacturing (OEMs), aerospace, and North American regulatory bodies.',
     email: 'info@unleashifai.com',
     linkedin: ' ',
     twitter: ' ',
     highlights: [
-      { icon: <Trophy className="w-4 h-4" />, text: 'Ex-OEM Executive Operators' },
+      { icon: <Trophy className="w-4 h-4" />, text: 'Ex-Global OEM Executives' },
       { icon: <ScrollText className="w-4 h-4" />, text: 'Government Grant & Policy Experts' },
       { icon: <Presentation className="w-4 h-4" />, text: 'Bridging Lab-to-Market Gap' }
     ]
@@ -58,10 +58,10 @@ const TeamSection = () => {
             World-Class Technical Leadership
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-black dark:text-white tracking-tight">
-            Built by Deep-Tech Veterans
+            Driven by R&D Pioneers
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
-            Eliminating technical risk. Our lab is steered by proven founders and academics who have successfully built, patented, and commercialized core AI technologies at a global scale.
+            Eliminating technical risk. Our lab is steered by seasoned R&D experts and industrial AI pioneers who have successfully built, patented, and commercialized core technologies at a global scale.
           </p>
           <div className="h-1 w-16 bg-purple-600 mx-auto mt-6"></div>
         </div>
