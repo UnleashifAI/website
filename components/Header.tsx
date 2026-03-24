@@ -40,18 +40,18 @@ const Header = () => {
             About
           </Link>
           <Link
-            href="#services"
+            href="#technologies"
             className={`text-sm font-medium hover:text-purple-500 transition-colors ${scrolled ? 'text-white/90 hover:text-purple-400' : 'text-black dark:text-white'
               }`}
           >
-            Services
+            Technologies
           </Link>
           <Link
-            href="#team"
+            href="#leadership"
             className={`text-sm font-medium hover:text-purple-500 transition-colors ${scrolled ? 'text-white/90 hover:text-purple-400' : 'text-black dark:text-white'
               }`}
           >
-            Team
+            Leadership
           </Link>
           <Link
             href="#contact"
@@ -98,18 +98,18 @@ const Header = () => {
             About
           </Link>
           <Link
-            href="#services"
+            href="#technologies"
             className="text-xl text-white hover:text-purple-400 transition-colors"
             onClick={handleNavClick}
           >
-            Services
+            Technologies
           </Link>
           <Link
-            href="#team"
+            href="#leadership"
             className="text-xl text-white hover:text-purple-400 transition-colors"
             onClick={handleNavClick}
           >
-            Team
+            Leadership
           </Link>
           <Link
             href="#contact"

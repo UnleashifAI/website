@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, ArrowUp, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowUp, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -16,17 +16,11 @@ const Footer = () => {
               Unleashif<span className="text-purple-500">AI</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              Executive-level AI expertise combined with deep regulatory knowledge to deliver strategic solutions for professional practices and enterprises worldwide.
+              North American deep-tech laboratory specializing in Edge AI, Industrial Digital Twins, and advanced visual perception for mission-critical engineering systems.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors" aria-label="Twitter">
-                <Twitter className="w-5 h-5" />
-              </a>
               <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors" aria-label="LinkedIn">
                 <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors" aria-label="Instagram">
-                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -34,20 +28,20 @@ const Footer = () => {
           <div>
             <h3 className="font-bold mb-4 text-white">Company</h3>
             <ul className="space-y-2">
-              <li><Link href="#about" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">About Us</Link></li>
-              <li><Link href="#team" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Leadership</Link></li>
-              <li><Link href="#services" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Service Pillars</Link></li>
-              <li><Link href="#contact" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Service Area</Link></li>
+              <li><Link href="#about" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">R&D Track Record</Link></li>
+              <li><Link href="#leadership" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Leadership</Link></li>
+              <li><Link href="#technologies" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Core Technologies</Link></li>
+              <li><Link href="#contact" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Contact</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-bold mb-4 text-white">Services</h3>
+            <h3 className="font-bold mb-4 text-white">Technologies</h3>
             <ul className="space-y-2">
-              <li><Link href="#services" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Custom AI Solutions</Link></li>
-              <li><Link href="#services" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Strategic Modeling</Link></li>
-              <li><Link href="#services" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">IT & AI Adaptation</Link></li>
-              <li><Link href="#services" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Compliance Solutions</Link></li>
+              <li><Link href="#technologies" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Edge AI</Link></li>
+              <li><Link href="#technologies" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Industrial Digital Twin</Link></li>
+              <li><Link href="#technologies" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Vision-Language Models</Link></li>
+              <li><Link href="#technologies" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Spatial Intelligence</Link></li>
             </ul>
           </div>
 
@@ -65,8 +59,8 @@ const Footer = () => {
               <li className="flex items-start text-sm text-gray-400">
                 <MapPin className="h-4 w-4 mr-2 text-purple-400 mt-0.5" />
                 <div>
-                  <div>Ottawa-Toronto Area</div>
-                  <div className="text-xs text-gray-500">(Local) & Worldwide (AI)</div>
+                  <div>Canada</div>
+                  <div className="text-xs text-gray-500">Global Industrial R&D</div>
                 </div>
               </li>
             </ul>
@@ -75,13 +69,12 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            © {currentYear} UnleashifAI. All rights reserved.
+            © {currentYear} UnleashifAI Inc. All rights reserved.
           </p>
 
           <div className="flex space-x-6">
             <Link href="#" className="text-gray-500 hover:text-purple-400 text-sm transition-colors">Privacy Policy</Link>
             <Link href="#" className="text-gray-500 hover:text-purple-400 text-sm transition-colors">Terms of Service</Link>
-            <Link href="#" className="text-gray-500 hover:text-purple-400 text-sm transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>

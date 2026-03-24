@@ -1,137 +1,229 @@
 'use client';
 
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (
-    <section className="pt-32 pb-20 md:py-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white to-gray-100 dark:from-black dark:to-gray-900">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="w-full md:w-1/2 mb-16 md:mb-0">
-            <div className="mb-6 inline-block px-4 py-1.5 bg-black/5 dark:bg-white/5 text-black dark:text-white font-medium text-sm rounded-full">
-              Strategic AI for Professional Practices
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Unleash the power of <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500">AI</span> for your professional practice
-            </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-lg">
-              We deliver two distinct services: custom AI solutions for enterprises worldwide, and comprehensive IT & AI support for local small businesses and professional practices.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+    <section className="relative pt-32 pb-20 md:py-40 px-4 sm:px-6 lg:px-8 bg-black overflow-hidden min-h-screen flex items-center">
+      {/* Ambient background glow */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/10 rounded-full blur-[150px]" />
+        <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-blue-500/8 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 left-1/4 w-[300px] h-[300px] bg-indigo-500/8 rounded-full blur-[100px]" />
+        {/* Grid overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+            backgroundSize: '60px 60px',
+          }}
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10 w-full">
+        <div className="flex flex-col lg:flex-row items-center gap-16">
+          <div className="w-full lg:w-1/2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mb-6 inline-block px-4 py-1.5 bg-white/5 backdrop-blur-sm border border-white/10 text-white/80 font-medium text-xs tracking-widest uppercase rounded-full"
+            >
+              Deep-Tech Industrial AI
+            </motion.div>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="text-4xl md:text-[3.25rem] lg:text-[4rem] font-extrabold mb-6 leading-[1.1] tracking-tight text-white"
+            >
+              Pioneering Visual Perception and{' '}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-violet-400 to-blue-400">
+                Edge AI Solutions
+              </span>
+              <br />
+              for Mission-Critical Engineering Systems
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.45 }}
+              className="text-lg text-gray-400 mb-10 max-w-2xl leading-relaxed"
+            >
+              We engineer state-of-the-art Industrial Digital Twins and highly optimized Edge algorithms tailored for Smart Manufacturing, Aerospace, and Autonomous Systems.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-3.5 bg-black dark:bg-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-purple-900 dark:hover:bg-purple-700"
+                className="group relative px-8 py-3.5 bg-purple-600 text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
               >
-                Get Started
+                <span className="relative z-10">Get Started</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-violet-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
               <button
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-3.5 border border-gray-300 dark:border-gray-700 rounded-lg hover:border-purple-500 hover:text-purple-700 dark:hover:text-purple-400 transition-all duration-300 font-medium"
+                onClick={() => document.getElementById('technologies')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-3.5 border border-white/15 text-white/90 rounded-lg hover:border-purple-500/50 hover:bg-white/5 backdrop-blur-sm transition-all duration-300 font-medium"
               >
-                Book a Demo
+                Explore Technologies
               </button>
-            </div>
+            </motion.div>
           </div>
-          <div className="w-full md:w-1/2 flex justify-center">
-            <div className="relative w-full max-w-md aspect-square">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-blue-500/10 rounded-full blur-3xl"></div>
-              <HeroGraphic />
+
+          {/* Hero Visual: Futuristic 3D Mesh Sphere */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="w-full lg:w-1/2 flex justify-center"
+          >
+            <div className="relative w-full max-w-lg aspect-square">
+              <HeroVisual />
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="hidden md:flex justify-center mt-16">
-          <div className="animate-bounce bg-white dark:bg-gray-800 p-2 w-10 h-10 ring-1 ring-gray-200 dark:ring-gray-700 shadow-lg rounded-full flex items-center justify-center">
-            <svg className="w-6 h-6 text-black dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.2 }}
+          className="hidden md:flex justify-center mt-16"
+        >
+          <div className="animate-bounce bg-white/5 backdrop-blur-sm p-2 w-10 h-10 ring-1 ring-white/10 rounded-full flex items-center justify-center">
+            <svg className="w-5 h-5 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
-// SVG Component for Hero Section with enhanced animation
-const HeroGraphic = () => (
-  <svg width="100%" height="100%" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="150" cy="150" r="120" stroke="#2d2d2d" strokeWidth="1" />
-    <circle cx="150" cy="150" r="90" stroke="#000000" strokeWidth="1" strokeDasharray="3 3">
-      <animateTransform
-        attributeName="transform"
-        type="rotate"
-        from="0 150 150"
-        to="360 150 150"
-        dur="60s"
-        repeatCount="indefinite"
-      />
-    </circle>
+// Modern Futuristic Visual — Glowing mesh sphere with orbiting rings
+const HeroVisual = () => (
+  <div className="relative w-full h-full flex items-center justify-center">
+    {/* Outer glow */}
+    <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-full blur-[80px] animate-pulse" />
 
-    {/* Nodes with pulse animation */}
-    <circle cx="150" cy="60" r="8" fill="#000000">
-      <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="240" cy="150" r="8" fill="#000000">
-      <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite" begin="0.5s" />
-    </circle>
-    <circle cx="150" cy="240" r="8" fill="#000000">
-      <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite" begin="1s" />
-    </circle>
-    <circle cx="60" cy="150" r="8" fill="#000000">
-      <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite" begin="1.5s" />
-    </circle>
+    <svg width="100%" height="100%" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="relative z-10">
+      <defs>
+        <radialGradient id="sphereGrad" cx="40%" cy="35%" r="50%">
+          <stop offset="0%" stopColor="#a855f7" stopOpacity="0.4" />
+          <stop offset="50%" stopColor="#7c3aed" stopOpacity="0.2" />
+          <stop offset="100%" stopColor="#1e1b4b" stopOpacity="0.05" />
+        </radialGradient>
+        <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#a855f7" stopOpacity="0.8" />
+          <stop offset="100%" stopColor="#a855f7" stopOpacity="0" />
+        </radialGradient>
+        <linearGradient id="ringGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#a855f7" stopOpacity="0.6" />
+          <stop offset="50%" stopColor="#6366f1" stopOpacity="0.1" />
+          <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.6" />
+        </linearGradient>
+        <linearGradient id="ringGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.4" />
+          <stop offset="100%" stopColor="#a855f7" stopOpacity="0.4" />
+        </linearGradient>
+      </defs>
 
-    <circle cx="195" cy="75" r="6" fill="#ffffff" stroke="#000000" strokeWidth="1" />
-    <circle cx="225" cy="105" r="6" fill="#ffffff" stroke="#000000" strokeWidth="1" />
-    <circle cx="225" cy="195" r="6" fill="#ffffff" stroke="#000000" strokeWidth="1" />
-    <circle cx="195" cy="225" r="6" fill="#ffffff" stroke="#000000" strokeWidth="1" />
-    <circle cx="105" cy="225" r="6" fill="#ffffff" stroke="#000000" strokeWidth="1" />
-    <circle cx="75" cy="195" r="6" fill="#ffffff" stroke="#000000" strokeWidth="1" />
-    <circle cx="75" cy="105" r="6" fill="#ffffff" stroke="#000000" strokeWidth="1" />
-    <circle cx="105" cy="75" r="6" fill="#ffffff" stroke="#000000" strokeWidth="1" />
+      {/* Main sphere */}
+      <circle cx="200" cy="200" r="100" fill="url(#sphereGrad)" stroke="url(#ringGrad1)" strokeWidth="0.5" />
 
-    <circle cx="150" cy="150" r="12" fill="#000000">
-      <animate attributeName="r" values="12;14;12" dur="3s" repeatCount="indefinite" />
-    </circle>
+      {/* Sphere wireframe lines — latitude */}
+      {[-60, -30, 0, 30, 60].map((offset, i) => (
+        <ellipse
+          key={`lat-${i}`}
+          cx="200"
+          cy={200 + offset * 0.8}
+          rx={Math.sqrt(Math.max(0, 100 * 100 - (offset * 0.8) * (offset * 0.8)))}
+          ry={Math.sqrt(Math.max(0, 100 * 100 - (offset * 0.8) * (offset * 0.8))) * 0.15}
+          stroke="#a855f7"
+          strokeWidth="0.3"
+          fill="none"
+          opacity={0.3 - Math.abs(offset) * 0.003}
+        />
+      ))}
 
-    {/* Connections */}
-    <line x1="150" y1="60" x2="150" y2="150" stroke="#000000" strokeWidth="1" />
-    <line x1="240" y1="150" x2="150" y2="150" stroke="#000000" strokeWidth="1" />
-    <line x1="150" y1="240" x2="150" y2="150" stroke="#000000" strokeWidth="1" />
-    <line x1="60" y1="150" x2="150" y2="150" stroke="#000000" strokeWidth="1" />
+      {/* Sphere wireframe — longitude */}
+      {[0, 30, 60, 90, 120, 150].map((angle, i) => (
+        <ellipse
+          key={`lon-${i}`}
+          cx="200"
+          cy="200"
+          rx={100 * Math.cos((angle * Math.PI) / 180)}
+          ry="100"
+          stroke="#818cf8"
+          strokeWidth="0.3"
+          fill="none"
+          opacity={0.2}
+          transform={`rotate(0 200 200)`}
+        />
+      ))}
 
-    <line x1="195" y1="75" x2="150" y2="150" stroke="#000000" strokeWidth="0.5" strokeDasharray="3 3">
-      <animate attributeName="strokeDashoffset" from="0" to="24" dur="20s" repeatCount="indefinite" />
-    </line>
-    <line x1="225" y1="105" x2="150" y2="150" stroke="#000000" strokeWidth="0.5" strokeDasharray="3 3">
-      <animate attributeName="strokeDashoffset" from="0" to="24" dur="20s" repeatCount="indefinite" />
-    </line>
-    <line x1="225" y1="195" x2="150" y2="150" stroke="#000000" strokeWidth="0.5" strokeDasharray="3 3">
-      <animate attributeName="strokeDashoffset" from="0" to="24" dur="20s" repeatCount="indefinite" />
-    </line>
-    <line x1="195" y1="225" x2="150" y2="150" stroke="#000000" strokeWidth="0.5" strokeDasharray="3 3">
-      <animate attributeName="strokeDashoffset" from="0" to="24" dur="20s" repeatCount="indefinite" />
-    </line>
-    <line x1="105" y1="225" x2="150" y2="150" stroke="#000000" strokeWidth="0.5" strokeDasharray="3 3">
-      <animate attributeName="strokeDashoffset" from="0" to="24" dur="20s" repeatCount="indefinite" />
-    </line>
-    <line x1="75" y1="195" x2="150" y2="150" stroke="#000000" strokeWidth="0.5" strokeDasharray="3 3">
-      <animate attributeName="strokeDashoffset" from="0" to="24" dur="20s" repeatCount="indefinite" />
-    </line>
-    <line x1="75" y1="105" x2="150" y2="150" stroke="#000000" strokeWidth="0.5" strokeDasharray="3 3">
-      <animate attributeName="strokeDashoffset" from="0" to="24" dur="20s" repeatCount="indefinite" />
-    </line>
-    <line x1="105" y1="75" x2="150" y2="150" stroke="#000000" strokeWidth="0.5" strokeDasharray="3 3">
-      <animate attributeName="strokeDashoffset" from="0" to="24" dur="20s" repeatCount="indefinite" />
-    </line>
+      {/* Orbiting ring 1 */}
+      <ellipse cx="200" cy="200" rx="140" ry="40" stroke="url(#ringGrad1)" strokeWidth="0.8" fill="none" transform="rotate(-25 200 200)">
+        <animateTransform attributeName="transform" type="rotate" from="-25 200 200" to="335 200 200" dur="25s" repeatCount="indefinite" />
+      </ellipse>
 
-    {/* Animated pulse */}
-    <circle cx="150" cy="150" r="60" stroke="#000000" strokeWidth="1" opacity="0.1">
-      <animate attributeName="r" values="60;100;60" dur="4s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.1;0.2;0.1" dur="4s" repeatCount="indefinite" />
-    </circle>
-  </svg>
+      {/* Orbiting ring 2 */}
+      <ellipse cx="200" cy="200" rx="160" ry="30" stroke="url(#ringGrad2)" strokeWidth="0.5" fill="none" transform="rotate(40 200 200)">
+        <animateTransform attributeName="transform" type="rotate" from="40 200 200" to="-320 200 200" dur="35s" repeatCount="indefinite" />
+      </ellipse>
+
+      {/* Orbiting dot on ring 1 */}
+      <circle r="4" fill="#a855f7">
+        <animateMotion dur="25s" repeatCount="indefinite" path="M60,200 A140,40 -25 1,1 340,200 A140,40 -25 1,1 60,200" />
+        <animate attributeName="opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite" />
+      </circle>
+
+      {/* Orbiting dot on ring 2 */}
+      <circle r="3" fill="#60a5fa">
+        <animateMotion dur="35s" repeatCount="indefinite" path="M40,200 A160,30 40 1,0 360,200 A160,30 40 1,0 40,200" />
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
+      </circle>
+
+      {/* Core glow */}
+      <circle cx="200" cy="200" r="20" fill="url(#coreGlow)">
+        <animate attributeName="r" values="18;24;18" dur="4s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="200" cy="200" r="5" fill="#c084fc" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.5;0.9" dur="3s" repeatCount="indefinite" />
+      </circle>
+
+      {/* Floating data nodes */}
+      {[
+        { cx: 120, cy: 110, delay: '0s' },
+        { cx: 290, cy: 130, delay: '0.5s' },
+        { cx: 280, cy: 280, delay: '1s' },
+        { cx: 110, cy: 270, delay: '1.5s' },
+        { cx: 200, cy: 80, delay: '2s' },
+        { cx: 310, cy: 200, delay: '2.5s' },
+      ].map((node, i) => (
+        <g key={`node-${i}`}>
+          <circle cx={node.cx} cy={node.cy} r="2.5" fill="#818cf8" opacity="0.7">
+            <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" begin={node.delay} repeatCount="indefinite" />
+          </circle>
+          <line x1={node.cx} y1={node.cy} x2="200" y2="200" stroke="#818cf8" strokeWidth="0.2" opacity="0.15" strokeDasharray="4 4">
+            <animate attributeName="opacity" values="0.05;0.2;0.05" dur="4s" begin={node.delay} repeatCount="indefinite" />
+          </line>
+        </g>
+      ))}
+
+      {/* Outer pulse ring */}
+      <circle cx="200" cy="200" r="120" stroke="#a855f7" strokeWidth="0.5" fill="none" opacity="0.1">
+        <animate attributeName="r" values="120;170;120" dur="6s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.1;0.05;0.1" dur="6s" repeatCount="indefinite" />
+      </circle>
+    </svg>
+  </div>
 );
 
 export default HeroSection;

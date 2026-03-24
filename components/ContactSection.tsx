@@ -27,7 +27,6 @@ const ContactSection = () => {
       [id]: value
     }));
 
-    // Clear error when user starts typing
     if (errors[id as keyof typeof errors]) {
       setErrors(prev => ({
         ...prev,
@@ -40,26 +39,22 @@ const ContactSection = () => {
     let isValid = true;
     const newErrors = { ...errors };
 
-    // Validate first name
     if (!formData.firstName.trim()) {
       newErrors.firstName = 'First name is required';
       isValid = false;
     }
 
-    // Validate last name
     if (!formData.lastName.trim()) {
       newErrors.lastName = 'Last name is required';
       isValid = false;
     }
 
-    // Validate email with regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim() || !emailRegex.test(formData.email)) {
       newErrors.email = 'Valid email is required';
       isValid = false;
     }
 
-    // Validate message
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
       isValid = false;
@@ -81,7 +76,6 @@ const ContactSection = () => {
 
     setIsSubmitting(true);
 
-    // Simulate form submission with a delay
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -92,13 +86,11 @@ const ContactSection = () => {
         message: '',
       });
 
-      // Scroll to top of form for better feedback visibility
       const formElement = document.getElementById('contact-form');
       if (formElement) {
         formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
 
-      // Reset form after some time
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
@@ -110,12 +102,11 @@ const ContactSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-black/5 dark:bg-white/5 rounded-full mb-4">
-            Contact Us
+            Get In Touch
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-black dark:text-white">Get In Touch</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-black dark:text-white tracking-tight">Start a Technical Collaboration</h2>
           <p className="text-gray-600 dark:text-gray-300 md:text-lg max-w-3xl mx-auto">
-            Have questions or ready to start your AI journey? Our team is here to help you
-            navigate the possibilities and find the perfect solution for your needs.
+            Whether you are exploring Edge AI deployment, building an Industrial Digital Twin, or need specialized visual perception research — our team is ready to discuss your technical requirements.
           </p>
           <div className="h-1 w-16 bg-purple-600 mx-auto mt-6"></div>
         </div>
@@ -220,7 +211,7 @@ const ContactSection = () => {
                       rows={5}
                       className={`w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border ${errors.message ? 'border-red-500 dark:border-red-500' : 'border-gray-200 dark:border-gray-700'
                         } rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-colors resize-none dark:text-white`}
-                      placeholder="How can we help you?"
+                      placeholder="Tell us about your project requirements, target industry, or technical challenges."
                       aria-required="true"
                       aria-invalid={errors.message ? "true" : "false"}
                     ></textarea>
@@ -269,11 +260,9 @@ const ContactSection = () => {
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold mb-1">Service Area</h4>
-                    <p className="text-gray-300">Ottawa - Toronto Area, Canada</p>
-                    <p className="text-gray-300 text-sm mt-1">(Local SMEs & Clinics)</p>
-                    <p className="text-gray-300 mt-2">Worldwide</p>
-                    <p className="text-gray-300 text-sm mt-1">(AI Solutions)</p>
+                    <h4 className="font-bold mb-1">Headquarters</h4>
+                    <p className="text-gray-300">Canada (North America)</p>
+                    <p className="text-gray-300 text-sm mt-1">Serving global industrial clients</p>
                   </div>
                 </div>
 
@@ -311,21 +300,16 @@ const ContactSection = () => {
                       <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                     </svg>
                   </a>
-                  <a href="#" className="bg-white/10 dark:bg-purple-600/20 p-3 rounded-full hover:bg-white/20 dark:hover:bg-purple-600/40 transition-colors" aria-label="Instagram">
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                    </svg>
-                  </a>
                 </div>
               </div>
 
               <div className="mt-12 pt-8 border-t border-gray-700">
                 <div className="bg-purple-900/30 p-4 rounded-lg">
                   <p className="text-center text-white font-semibold">
-                    📞 Consultations Available Anytime
+                    Technical Consultations Available
                   </p>
                   <p className="text-center text-gray-300 text-sm mt-2">
-                    Contact us via email or phone for flexible scheduling
+                    Contact us to discuss R&D partnerships, joint proposals, or technical licensing
                   </p>
                 </div>
               </div>
@@ -339,17 +323,17 @@ const ContactSection = () => {
             <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white">
               <MapPin className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">Our Service Coverage</h3>
+            <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">Global R&D Reach</h3>
             <div className="grid md:grid-cols-2 gap-8 mt-8">
               <div className="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
-                <h4 className="font-bold text-lg mb-2 text-black dark:text-white">Local Services</h4>
-                <p className="text-purple-600 dark:text-purple-400 font-semibold mb-2">Ottawa - Toronto Area, Canada</p>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">Full-service IT & AI adaptation for professional practices, SMEs, and clinics</p>
+                <h4 className="font-bold text-lg mb-2 text-black dark:text-white">North American HQ</h4>
+                <p className="text-purple-600 dark:text-purple-400 font-semibold mb-2">Canada</p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">Core R&D lab, university partnerships, and government-funded research programs</p>
               </div>
               <div className="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
-                <h4 className="font-bold text-lg mb-2 text-black dark:text-white">Global Services</h4>
-                <p className="text-purple-600 dark:text-purple-400 font-semibold mb-2">Worldwide</p>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">Custom AI solutions, strategic modeling, and high-value consulting</p>
+                <h4 className="font-bold text-lg mb-2 text-black dark:text-white">International Collaboration</h4>
+                <p className="text-purple-600 dark:text-purple-400 font-semibold mb-2">Asia-Pacific & Europe</p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">Joint R&D projects with industrial partners in Smart Manufacturing, Aerospace, and Automotive sectors</p>
               </div>
             </div>
           </div>
