@@ -113,15 +113,6 @@ const TeamSection = () => {
                         </div>
                       ))}
                     </div>
-
-                    <div className="pt-4 flex items-center space-x-3">
-                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-purple-600 hover:bg-purple-100 transition-colors">
-                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" /></svg>
-                      </a>
-                      <a href={member.linkedin} className="text-xs font-bold text-purple-600 hover:text-purple-800 flex items-center">
-                        View Full Profile <ExternalLink className="w-3 h-3 ml-1" />
-                      </a>
-                    </div>
                   </div>
                 </div>
               </div>

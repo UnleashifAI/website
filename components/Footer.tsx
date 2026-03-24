@@ -19,9 +19,6 @@ const Footer = () => {
               North American deep-tech laboratory specializing in Edge AI, Industrial Digital Twins, and advanced visual perception for mission-critical engineering systems.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors" aria-label="LinkedIn">
-                <Linkedin className="w-5 h-5" />
-              </a>
             </div>
           </div>
 
@@ -52,10 +49,7 @@ const Footer = () => {
                 <Mail className="h-4 w-4 mr-2 text-purple-400" />
                 info@unleashifai.com
               </li>
-              <li className="flex items-center text-sm text-gray-400">
-                <Phone className="h-4 w-4 mr-2 text-purple-400" />
-                +1-438-885-1872
-              </li>
+
               <li className="flex items-start text-sm text-gray-400">
                 <MapPin className="h-4 w-4 mr-2 text-purple-400 mt-0.5" />
                 <div>
