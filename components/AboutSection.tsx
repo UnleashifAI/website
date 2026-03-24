@@ -42,7 +42,7 @@ const AboutSection = () => {
             <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-6">
               <Activity className="w-6 h-6 text-purple-600 dark:text-purple-400" />
             </div>
-            <p className="text-purple-600 dark:text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">Mitacs & TIPA Linked</p>
+            <p className="text-purple-600 dark:text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">Smart Manufacturing R&D</p>
             <h3 className="text-xl font-bold mb-3 text-black dark:text-white">Autonomous Pre-process Setup for Smart Manufacturing</h3>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
               Deploying industrial digital twins and physics-informed AI optimization algorithms tailored for dynamic, high-mix job-shop manufacturing environments.
@@ -54,7 +54,7 @@ const AboutSection = () => {
             <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-6">
               <ShieldCheck className="w-6 h-6 text-purple-600 dark:text-purple-400" />
             </div>
-            <p className="text-purple-600 dark:text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">IITP Linked</p>
+            <p className="text-purple-600 dark:text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">Industrial Safety Core</p>
             <h3 className="text-xl font-bold mb-3 text-black dark:text-white">Mission-Critical HRI Safety Monitoring</h3>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
               Engineering multimodal AI architectures for worker cognitive load detection and real-time safety distance (ISO 10218) monitoring in high-risk human-robot interaction environments.
