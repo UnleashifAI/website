@@ -60,7 +60,7 @@ const ecosystemCategories = [
     description: 'Proven deployment track record with real-world industrial clients.',
     partners: [
       {
-        name: 'Geomexsoft',
+        name: 'Geomexsoft (South Korea)',
         logo: '/geomex_logo.png',
         role: 'Commercial Deployment Client — Edge Vision AI for Real-time Road Hazard Detection',
         width: 180,
