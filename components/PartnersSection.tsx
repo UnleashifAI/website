@@ -11,14 +11,14 @@ const ecosystemCategories = [
     description: 'Government-backed validation and strategic contract research in core technologies.',
     partners: [
       {
-        name: 'National Research Council Canada (NRC)',
+        name: 'National Research Council (NRC, Canada)',
         logo: '/NRCC_logo.png',
         role: 'Aerospace Vision Joint R&D & Contract Research',
         width: 200,
         height: 80,
       },
       {
-        name: 'Mitacs',
+        name: 'Mitacs (Canada)',
         logo: '/mitacs_logo.png',
         role: 'Manufacturing Digital Twin & Edge AI Commercialization R&D',
         width: 180,
@@ -32,21 +32,21 @@ const ecosystemCategories = [
     description: 'Joint R&D partnerships with world-class research institutions.',
     partners: [
       {
-        name: 'University of Toronto',
+        name: 'University of Toronto (Canada)',
         logo: '/uoft-logo.png',
         role: 'Joint R&D in Structural Mechanics & Digital Twin',
         width: 120,
         height: 120,
       },
       {
-        name: 'Korea Electronics Technology Institute (KETI)',
+        name: 'Korea Electronics Technology Institute (KETI, South Korea)',
         logo: '/keti_logo.png',
         role: 'Joint Research in Multimodal AI & Edge Optimization',
         width: 160,
         height: 80,
       },
       {
-        name: 'University of Windsor',
+        name: 'University of Windsor (Canada)',
         logo: '/windsor-logo.png',
         role: 'Joint R&D in Autonomous Mobility & Edge AI',
         width: 220,
