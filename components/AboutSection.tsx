@@ -79,10 +79,10 @@ const AboutSection = () => {
         <ScrollReveal delay={0.2}>
         <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
-            { number: '$14M+', label: 'Public-Private Funding' },
-            { number: '100%', label: 'Proprietary IP Focus' },
-            { number: 'Ph.D.', label: 'Technical Leadership' },
-            { number: 'Gov', label: 'Tested & Validated By' }
+            { number: '3+', label: 'Active Joint R&D Programs' },
+            { number: '100%', label: 'Proprietary AI Architectures' },
+            { number: 'Top-Tier', label: 'Academic R&D Network' },
+            { number: 'Federal', label: 'Joint R&D Partner' }
           ].map((stat, index) => (
             <div
               key={index}
