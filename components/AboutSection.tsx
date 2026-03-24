@@ -30,7 +30,7 @@ const AboutSection = () => {
             <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-6">
               <Microscope className="w-6 h-6 text-purple-600 dark:text-purple-400" />
             </div>
-            <p className="text-purple-600 dark:text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">NRC Funded</p>
+            <p className="text-purple-600 dark:text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">Joint R&D Partner</p>
             <h3 className="text-xl font-bold mb-3 text-black dark:text-white">Aerospace Coating Inspection</h3>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
               Developing AI-based vision inspection software for the Thermal Gradient Shock Tester (TGST), ensuring sub-millimeter precision for critical aerospace defensive coatings.

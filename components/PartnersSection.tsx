@@ -7,13 +7,13 @@ import ScrollReveal from './ScrollReveal';
 const ecosystemCategories = [
   {
     id: 'funded',
-    label: 'Backed & Funded By',
-    description: 'Government-backed validation of our core technology and research capabilities.',
+    label: 'Government R&D & Funding Partners',
+    description: 'Government-backed validation and strategic contract research in core technologies.',
     partners: [
       {
         name: 'National Research Council Canada (NRC)',
         logo: '/NRCC_logo.png',
-        role: 'Aerospace & Industrial AI Vision R&D Funding',
+        role: 'Aerospace Vision Joint R&D & Contract Research',
         width: 200,
         height: 80,
       },
