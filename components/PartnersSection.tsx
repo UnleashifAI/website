@@ -60,9 +60,9 @@ const ecosystemCategories = [
     description: 'Proven deployment track record with real-world industrial clients.',
     partners: [
       {
-        name: 'Geomax',
+        name: 'Geomexsoft',
         logo: '/geomex_logo.png',
-        role: 'Commercial Deployment Client — AI Solution Deployed',
+        role: 'Commercial Deployment Client — Edge Vision AI for Real-time Road Hazard Detection',
         width: 180,
         height: 70,
       },
