@@ -8,13 +8,13 @@ const teamMembers = [
   {
     name: 'Principal Investigator & Founder',
     role: 'C-Level Executive & Multinational R&D Director',
-    bio: "Over 15 Years of Global AI & Visual Perception R&D Experience spanning North America, Europe, and Asia. Successfully directed $14M+ in Public-Private Tech Funding and investment for a North American Deep-tech Startup. A proven technical leader with multiple industrial AI patents and deep ties to the global academic community.",
+    bio: "Over 15 Years of Global AI & Visual Perception R&D Experience spanning North America, Europe, and Asia. Successfully directed $14M+ in Public-Private Tech Funding and investment for a North American Deep-tech Startup. A proven technical leader with deep industrial AI expertise and strong ties to the global academic community.",
     email: 'info@unleashifai.com',
     linkedin: ' ',
     twitter: ' ',
     highlights: [
       { icon: <Trophy className="w-4 h-4" />, text: 'Over $14M in Public-Private Funding' },
-      { icon: <ScrollText className="w-4 h-4" />, text: 'Multiple Industrial AI Patents' },
+      { icon: <ScrollText className="w-4 h-4" />, text: 'Deep Industrial AI Expertise' },
       { icon: <Presentation className="w-4 h-4" />, text: '15+ Years Global AI R&D Experience' }
     ]
   },
@@ -61,7 +61,7 @@ const TeamSection = () => {
             Driven by R&D Pioneers
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
-            Eliminating technical risk. Our lab is steered by seasoned R&D experts and industrial AI pioneers who have successfully built, patented, and commercialized core technologies at a global scale.
+            Eliminating technical risk. Our lab is steered by seasoned R&D experts and industrial AI pioneers who have successfully built, developed, and commercialized core technologies at a global scale.
           </p>
           <div className="h-1 w-16 bg-purple-600 mx-auto mt-6"></div>
         </div>

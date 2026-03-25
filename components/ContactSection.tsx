@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, CheckCircle2, Loader2 } from 'lucide-react';
+import { MapPin, Mail, CheckCircle2, Loader2 } from 'lucide-react';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -278,16 +278,6 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="mt-12">
-                <h4 className="font-bold mb-4">Connect With Us</h4>
-                <div className="flex space-x-4">
-                  <a href="#" className="bg-white/10 dark:bg-purple-600/20 p-3 rounded-full hover:bg-white/20 dark:hover:bg-purple-600/40 transition-colors" aria-label="Twitter">
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
 
               <div className="mt-12 pt-8 border-t border-gray-700">
                 <div className="bg-purple-900/30 p-4 rounded-lg">
@@ -318,7 +308,7 @@ const ContactSection = () => {
               </div>
               <div className="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
                 <h4 className="font-bold text-lg mb-2 text-black dark:text-white">International Collaboration</h4>
-                <p className="text-purple-600 dark:text-purple-400 font-semibold mb-2">Asia-Pacific & Europe</p>
+                <p className="text-purple-600 dark:text-purple-400 font-semibold mb-2">Asia-Pacific</p>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">Expanding North American and global R&D partnerships to deploy robust Edge AI solutions across Aerospace, Smart Manufacturing, and Advanced Automotive sectors.</p>
               </div>
             </div>

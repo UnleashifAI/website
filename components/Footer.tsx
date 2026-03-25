@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, ArrowUp, Linkedin } from 'lucide-react';
+import { Mail, MapPin, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,8 +18,7 @@ const Footer = () => {
             <p className="text-gray-400 mb-6 max-w-md">
               North American deep-tech laboratory specializing in Edge AI, Industrial Digital Twins, and advanced visual perception for mission-critical engineering systems.
             </p>
-            <div className="flex space-x-4">
-            </div>
+
           </div>
 
           <div>
@@ -38,7 +37,7 @@ const Footer = () => {
               <li><Link href="#technologies" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Edge AI</Link></li>
               <li><Link href="#technologies" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Industrial Digital Twin</Link></li>
               <li><Link href="#technologies" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Vision-Language Models</Link></li>
-              <li><Link href="#technologies" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Spatial Intelligence</Link></li>
+              <li><Link href="#technologies" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">Autonomous Mobility</Link></li>
             </ul>
           </div>
 
