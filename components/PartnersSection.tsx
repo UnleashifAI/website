@@ -52,6 +52,13 @@ const ecosystemCategories = [
         width: 220,
         height: 70,
       },
+      {
+        name: 'University of Calgary (Canada)',
+        logo: '/calgary-logo.png',
+        role: 'Joint R&D in Human-Robot Collaboration (HRC) & Industrial Safety',
+        width: 200,
+        height: 70,
+      },
     ],
   },
   {
@@ -63,6 +70,13 @@ const ecosystemCategories = [
         name: 'Geomexsoft (South Korea)',
         logo: '/geomex_logo.png',
         role: 'Commercial Deployment Client — Edge Vision AI for Real-time Road Hazard Detection',
+        width: 180,
+        height: 70,
+      },
+      {
+        name: 'Daesan Geotech (South Korea)',
+        logo: '/daesan-logo.jpg',
+        role: 'Smart Manufacturing R&D Client — Edge AI & Digital Twin for Metal Processing',
         width: 180,
         height: 70,
       },
