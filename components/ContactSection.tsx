@@ -261,8 +261,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-bold mb-1">Headquarters</h4>
-                    <p className="text-gray-300">Canada (North America)</p>
-                    <p className="text-gray-300 text-sm mt-1">Serving global industrial clients</p>
+                    <p className="text-gray-300">Ottawa, ON, Canada</p>
+                    <p className="text-gray-300 text-sm mt-1">Global Industrial R&D Hub</p>
                   </div>
                 </div>
 
@@ -313,7 +313,7 @@ const ContactSection = () => {
             <div className="grid md:grid-cols-2 gap-8 mt-8">
               <div className="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
                 <h4 className="font-bold text-lg mb-2 text-black dark:text-white">North American HQ</h4>
-                <p className="text-purple-600 dark:text-purple-400 font-semibold mb-2">Canada</p>
+                <p className="text-purple-600 dark:text-purple-400 font-semibold mb-2">Ottawa, ON, Canada</p>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">Core R&D lab, university partnerships, and government-funded research programs</p>
               </div>
               <div className="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
