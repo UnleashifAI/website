@@ -65,10 +65,7 @@ const Footer = () => {
             © {currentYear} UnleashifAI Inc. All rights reserved.
           </p>
 
-          <div className="flex space-x-6">
-            <Link href="#" className="text-gray-500 hover:text-purple-400 text-sm transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-gray-500 hover:text-purple-400 text-sm transition-colors">Terms of Service</Link>
-          </div>
+
         </div>
       </div>
 
