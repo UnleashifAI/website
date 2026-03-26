@@ -73,13 +73,6 @@ const ecosystemCategories = [
         width: 180,
         height: 70,
       },
-      {
-        name: 'Daesan Geotech (South Korea)',
-        logo: '/daesan-logo.jpg',
-        role: 'Smart Manufacturing R&D Client — Edge AI & Digital Twin for Metal Processing',
-        width: 180,
-        height: 70,
-      },
     ],
   },
 ];
